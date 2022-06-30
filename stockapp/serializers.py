@@ -14,7 +14,7 @@ class Categoryserilizer(serializers.ModelSerializer):
 
 
 class Productserilizer(serializers.ModelSerializer):
-    # barcode_number = serializers.HiddenField(default = 1)
+    barcode_number = serializers.HiddenField(default = 1)
     category_set = Categoryserilizer(many=True,read_only= True)
     class Meta:
         model = Product
